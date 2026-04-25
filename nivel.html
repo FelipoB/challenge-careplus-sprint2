@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Care(Us) — Meu Nível</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="sidebarMount"></div>
+
+<div class="main-content">
+
+  <div class="topbar d-flex align-items-center justify-content-between">
+    <div>
+      <div class="page-title">Meu Nível & Conquistas</div>
+      <div class="page-sub">Jornada de Cuidado Care(Us)</div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Hero do nível atual -->
+    <div class="rounded-4 p-4 mb-4 fade-up d-flex align-items-center flex-wrap gap-3"
+         style="background:linear-gradient(135deg,var(--cp-blue-dark),var(--cp-blue),#1565C0); color:#fff;">
+      <div style="font-size:52px; line-height:1;">⭐</div>
+      <div class="flex-grow-1">
+        <div style="font-size:11px;opacity:.6;text-transform:uppercase;letter-spacing:1px;">Seu nível atual</div>
+        <div class="fw-black" style="font-size:28px; line-height:1.1;">Prata</div>
+        <div style="color:rgba(255,255,255,.7);font-size:13px;">Acesso ao Clube de Vantagens Care(Us)</div>
+      </div>
+      <div class="text-end" style="min-width:200px;">
+        <div class="fw-black" style="font-size:38px; color:var(--cp-cyan); line-height:1;">
+          625 <span style="font-size:16px;opacity:.7;">pts</span>
+        </div>
+        <div style="font-size:12px;opacity:.6;margin-bottom:6px;">875 pts para o nível Ouro</div>
+        <div class="cp-progress" style="background:rgba(255,255,255,.2);">
+          <div class="cp-progress-fill" id="heroBar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Como ganhar pontos -->
+    <div class="cp-card p-4 mb-4 fade-up">
+      <h6 class="fw-bold mb-3"><i class="fas fa-circle-info me-1" style="color:var(--cp-cyan);"></i> Como ganhar Care Points</h6>
+      <div class="row g-2">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="text-center p-2 rounded-3" style="background:var(--cp-gray-bg);">
+            <div style="font-size:22px;">🗓️</div>
+            <div class="fw-bold" style="font-size:13px;color:var(--cp-blue);">+20 pts</div>
+            <div style="font-size:11px;color:var(--cp-gray-text);">Agendamento pelo app</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="text-center p-2 rounded-3" style="background:var(--cp-gray-bg);">
+            <div style="font-size:22px;">✅</div>
+            <div class="fw-bold" style="font-size:13px;color:var(--cp-blue);">+50 pts</div>
+            <div style="font-size:11px;color:var(--cp-gray-text);">Comparecer à consulta</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="text-center p-2 rounded-3" style="background:var(--cp-gray-bg);">
+            <div style="font-size:22px;">⏰</div>
+            <div class="fw-bold" style="font-size:13px;color:var(--cp-blue);">+20 pts</div>
+            <div style="font-size:11px;color:var(--cp-gray-text);">Cancelar com 48h+</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="text-center p-2 rounded-3" style="background:var(--cp-gray-bg);">
+            <div style="font-size:22px;">👤</div>
+            <div class="fw-bold" style="font-size:13px;color:var(--cp-blue);">+30 pts</div>
+            <div style="font-size:11px;color:var(--cp-gray-text);">Perfil completo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="text-center p-2 rounded-3" style="background:var(--cp-gray-bg);">
+            <div style="font-size:22px;">📅</div>
+            <div class="fw-bold" style="font-size:13px;color:var(--cp-blue);">+15 pts</div>
+            <div style="font-size:11px;color:var(--cp-gray-text);">Sincronizar Agenda</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="text-center p-2 rounded-3" style="background:var(--cp-gray-bg);">
+            <div style="font-size:22px;">🔥</div>
+            <div class="fw-bold" style="font-size:13px;color:var(--cp-blue);">+100 pts</div>
+            <div style="font-size:11px;color:var(--cp-gray-text);">10 consultas seguidas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABAS Bootstrap -->
+    <ul class="nav nav-pills mb-4" id="nivelTabs">
+      <li class="nav-item">
+        <button class="nav-link active fw-bold" data-bs-toggle="pill" data-bs-target="#tabNiveis">Níveis</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link fw-bold" data-bs-toggle="pill" data-bs-target="#tabConquistas">Conquistas</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link fw-bold" data-bs-toggle="pill" data-bs-target="#tabFastpass">FastPass</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      <!-- ABA NÍVEIS -->
+      <div class="tab-pane fade show active" id="tabNiveis">
+
+        <!-- Prata (atual) -->
+        <div class="level-card prata mb-3 fade-up">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="fw-black" style="font-size:20px;color:#607D8B;">⭐ Nível Prata</div>
+            <span class="badge fw-bold" style="background:#607D8B;color:#fff;">✓ NÍVEL ATUAL</span>
+          </div>
+          <div class="fw-bold mb-3" style="font-size:13px;color:#607D8B;">600+ Care Points</div>
+          <ul class="list-unstyled mb-0" style="font-size:14px;">
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#607D8B;"></i> Clube de Vantagens Care(Us): descontos em dermocosméticos e higiene bucal</li>
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#607D8B;"></i> Conteúdo de Bem-Estar: artigos e vídeos exclusivos com especialistas</li>
+          </ul>
+        </div>
+
+        <!-- Ouro -->
+        <div class="level-card ouro mb-3 fade-up" style="opacity:.85;">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="fw-black" style="font-size:20px;color:#E65100;">🏆 Nível Ouro</div>
+            <span class="badge fw-bold" style="background:#E65100;color:#fff;">🔒 875 pts restantes</span>
+          </div>
+          <div class="fw-bold mb-2" style="font-size:13px;color:#E65100;">1.500+ Care Points</div>
+          <div class="cp-progress mb-1" style="background:#FFCC80;">
+            <div class="cp-progress-fill" id="ouroBar" style="width:0%;background:linear-gradient(90deg,#E65100,#FFB300);"></div>
+          </div>
+          <div class="mb-3" style="font-size:11px;color:#E65100;font-weight:700;">625 / 1500 pts</div>
+          <ul class="list-unstyled mb-0" style="font-size:14px;">
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#E65100;"></i> Todos os benefícios do Nível Prata</li>
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#E65100;"></i> Check-in Expresso (QuickFill): sem burocracia na recepção</li>
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#E65100;"></i> Cuidado Preventivo Anual Gratuito (limpeza dental ou avaliação de pele)</li>
+          </ul>
+        </div>
+
+        <!-- Diamante -->
+        <div class="level-card diamante mb-3 fade-up" style="opacity:.75;">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="fw-black" style="font-size:20px;color:#006064;">💎 Nível Diamante</div>
+            <span class="badge fw-bold" style="background:#006064;color:#fff;">🔒 Bloqueado</span>
+          </div>
+          <div class="fw-bold mb-3" style="font-size:13px;color:#006064;">3.000+ Care Points</div>
+          <ul class="list-unstyled mb-0" style="font-size:14px;">
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#006064;"></i> Todos os benefícios do Nível Ouro</li>
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#006064;"></i> FastPass contínuo: prioridade máxima em agendamentos e horários de pico</li>
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#006064;"></i> Concierge de Atendimento via WhatsApp com resposta prioritária</li>
+            <li class="mb-1"><i class="fas fa-check-circle me-2" style="color:#006064;"></i> Convites para eventos e workshops exclusivos com especialistas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ABA CONQUISTAS -->
+      <div class="tab-pane fade" id="tabConquistas">
+
+        <div class="d-flex align-items-center gap-2 mb-3 fw-bold" style="font-size:12px;color:var(--cp-gray-text);text-transform:uppercase;letter-spacing:1px;">
+          🌟 Boas-vindas ao Care(Us)
+        </div>
+
+        <div class="conquest-item mb-2 fade-up">
+          <div class="conquest-icon">🚀</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Bem-Vindo à Bordo!</div>
+            <small class="text-muted">Primeiro login realizado no app</small>
+          </div>
+          <span class="fw-bold" style="color:var(--cp-cyan);white-space:nowrap;">+10 CP ✅</span>
+        </div>
+
+        <div class="conquest-item mb-2 fade-up">
+          <div class="conquest-icon">🗓️</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Agendamento Inaugural</div>
+            <small class="text-muted">Primeira consulta agendada pelo app</small>
+          </div>
+          <span class="fw-bold" style="color:var(--cp-cyan);white-space:nowrap;">+20 CP ✅</span>
+        </div>
+
+        <div class="conquest-item mb-4 fade-up">
+          <div class="conquest-icon">👤</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Perfil Completo, Cuidado Completo</div>
+            <small class="text-muted">100% do perfil de saúde preenchido</small>
+          </div>
+          <span class="fw-bold" style="color:var(--cp-cyan);white-space:nowrap;">+30 CP ✅</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 mb-3 fw-bold" style="font-size:12px;color:var(--cp-gray-text);text-transform:uppercase;letter-spacing:1px;">
+          👍 Mestre da Pontualidade
+        </div>
+
+        <div class="conquest-item mb-2 fade-up">
+          <div class="conquest-icon">✅</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Presença Confirmada!</div>
+            <small class="text-muted">Compareceu à primeira consulta agendada</small>
+          </div>
+          <span class="fw-bold" style="color:var(--cp-cyan);white-space:nowrap;">+50 CP ✅</span>
+        </div>
+
+        <div class="conquest-item locked mb-2 fade-up">
+          <div class="conquest-icon locked-icon">🔒</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Sequência Impecável</div>
+            <small class="text-muted">Compareça a 3 consultas seguidas sem no-show</small>
+          </div>
+          <span class="fw-bold text-muted white-space:nowrap;">+30 CP</span>
+        </div>
+
+        <div class="conquest-item locked mb-4 fade-up">
+          <div class="conquest-icon locked-icon">🔒</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Chegada Triunfal</div>
+            <small class="text-muted">Pontualidade em 3 consultas seguidas</small>
+          </div>
+          <span class="fw-bold text-muted">+15 CP</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 mb-3 fw-bold" style="font-size:12px;color:var(--cp-gray-text);text-transform:uppercase;letter-spacing:1px;">
+          📋 Planejador Consciente
+        </div>
+
+        <div class="conquest-item mb-2 fade-up">
+          <div class="conquest-icon">⏰</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Aviso Prévio</div>
+            <small class="text-muted">Cancelou com mais de 48h de antecedência</small>
+          </div>
+          <span class="fw-bold" style="color:var(--cp-cyan);white-space:nowrap;">+20 CP ✅</span>
+        </div>
+
+        <div class="conquest-item locked mb-2 fade-up">
+          <div class="conquest-icon locked-icon">🔒</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Mestre da Agenda</div>
+            <small class="text-muted">5 cancelamentos/reagendamentos com 48h+ de antecedência</small>
+          </div>
+          <span class="fw-bold text-muted">+50 CP</span>
+        </div>
+
+        <div class="conquest-item fade-up">
+          <div class="conquest-icon">📅</div>
+          <div class="flex-grow-1">
+            <div class="fw-bold">Agenda Sincronizada</div>
+            <small class="text-muted">Google Agenda conectado ao Care(Us)</small>
+          </div>
+          <span class="fw-bold" style="color:var(--cp-cyan);white-space:nowrap;">+15 CP ✅</span>
+        </div>
+
+      </div>
+
+      <!-- ABA FASTPASS -->
+      <div class="tab-pane fade" id="tabFastpass">
+        <div class="rounded-4 p-4 text-center mb-4 fade-up"
+             style="background:linear-gradient(135deg,var(--cp-blue-dark),var(--cp-blue));">
+          <div class="fw-black mb-2" style="font-size:32px;color:var(--cp-cyan);letter-spacing:-1px;">
+            FAST<i class="fas fa-bolt"></i>PASS
+          </div>
+          <p style="color:rgba(255,255,255,.75);">
+            Acesse todos os benefícios Diamante instantaneamente, sem precisar acumular pontos.
+          </p>
+
+          <div class="row g-3 mb-4 text-start">
+            <div class="col-md-6">
+              <div class="p-3 rounded-3" style="background:rgba(255,255,255,.1);">
+                <div class="mb-1" style="font-size:18px;">⚡</div>
+                <div class="fw-bold text-white">Prioridade Máxima</div>
+                <small style="color:rgba(255,255,255,.6);">Horários de pico e encaixes de última hora</small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded-3" style="background:rgba(255,255,255,.1);">
+                <div class="mb-1" style="font-size:18px;">💬</div>
+                <div class="fw-bold text-white">Concierge WhatsApp</div>
+                <small style="color:rgba(255,255,255,.6);">Suporte prioritário e personalizado</small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded-3" style="background:rgba(255,255,255,.1);">
+                <div class="mb-1" style="font-size:18px;">🎁</div>
+                <div class="fw-bold text-white">Teleatendimento Anual</div>
+                <small style="color:rgba(255,255,255,.6);">1 consulta online gratuita por ano</small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded-3" style="background:rgba(255,255,255,.1);">
+                <div class="mb-1" style="font-size:18px;">🏆</div>
+                <div class="fw-bold text-white">Todos os Benefícios</div>
+                <small style="color:rgba(255,255,255,.6);">Prata + Ouro + Diamante inclusos</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Planos -->
+          <div class="row g-3 justify-content-center mb-4">
+            <div class="col-auto">
+              <div class="p-3 rounded-3 text-center" style="background:rgba(255,255,255,.15);min-width:150px;">
+                <div style="font-size:11px;color:rgba(255,255,255,.6);font-weight:700;">MENSAL</div>
+                <div class="fw-black text-white" style="font-size:28px;">R$49</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.5);">/mês</div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="p-3 rounded-3 text-center" style="background:var(--cp-cyan);min-width:150px;">
+                <div style="font-size:11px;color:var(--cp-blue-dark);font-weight:800;">ANUAL — 20% OFF</div>
+                <div class="fw-black" style="font-size:28px;color:var(--cp-blue-dark);">R$39</div>
+                <div style="font-size:11px;color:var(--cp-blue-dark);opacity:.7;">/mês</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn fw-bold px-5 py-2" onclick="showToast('Redirecionando para assinatura...','success')"
+                  style="background:var(--cp-cyan);color:var(--cp-blue-dark);border-radius:12px;font-size:15px;">
+            <i class="fas fa-bolt me-2"></i> Assinar FastPass
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /tab-content -->
+  </div><!-- /page-wrapper -->
+</div><!-- /main-content -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/sidebar.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    buildSidebar('nivel');
+    animateBar(document.getElementById('heroBar'), 41.7);
+    animateBar(document.getElementById('ouroBar'), 41.7);
+  });
+</script>
+</body>
+</html>
