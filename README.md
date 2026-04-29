@@ -1,4 +1,4 @@
-# Care(Us) 🏥
+# Care(Us) 
 ### Challenge FIAP x Care Plus — Sprint 2
 
 > **"Transformando o Cuidado em Conexão."**
@@ -11,7 +11,7 @@
 
 ---
 
-## 📋 Sobre o Projeto
+##  Sobre o Projeto
 
 O **Care(Us)** é uma plataforma web desenvolvida como resposta ao **Challenge FIAP x Care Plus 2025/2026**, cujo objetivo é criar uma solução digital inovadora que **reduza o no-show nas clínicas da Care Plus**, engaje os pacientes e promova uma cultura de responsabilidade com a própria saúde.
 
@@ -23,31 +23,31 @@ A solução integra recursos de **mobilidade urbana, agendamento inteligente e g
 
 Clínicas odontológicas e dermatológicas enfrentam taxas de **no-show entre 10% e 30%**, causadas por:
 
-- 📅 Esquecimento e falhas de comunicação
-- 🚗 Trânsito, clima e dificuldades de deslocamento
-- 📞 Dificuldade de reagendamento (processo burocrático por telefone)
-- 🏆 Ausência de incentivos para o comparecimento
-- 📍 Distância e localização das clínicas
+- Esquecimento e falhas de comunicação
+- Trânsito, clima e dificuldades de deslocamento
+- Dificuldade de reagendamento (processo burocrático por telefone)
+- Ausência de incentivos para o comparecimento
+- Distância e localização das clínicas
 
 ---
 
-## 💡 A Solução
+##  A Solução
 
 O Care(Us) combate o no-show através de:
 
 | Funcionalidade | Descrição |
 |---|---|
-| 🗓️ **Agendamento Ágil** | Fluxo em 4 etapas com stepper interativo, sem telefonemas |
-| 🔔 **Notificações Preditivas** | Lembretes com análise de trânsito e clima em tempo real |
-| 🏆 **Care Points** | Sistema de gamificação com pontos, níveis e conquistas |
-| ↻ **Reagendamento Fácil** | Re-agendamento em 3 cliques diretamente no dashboard |
-| 📍 **Integração de Mapas** | Google Maps, Google Agenda e Waze integrados |
-| 💳 **Carteirinha Digital** | Cartão digital com QR Code e dados de saúde |
-| ⚡ **FastPass** | Plano premium com benefícios Diamante imediatos |
+| **Agendamento Ágil** | Fluxo em 4 etapas com stepper interativo, sem telefonemas |
+| **Notificações Preditivas** | Lembretes com análise de trânsito e clima em tempo real |
+| **Care Points** | Sistema de gamificação com pontos, níveis e conquistas |
+| **Reagendamento Fácil** | Re-agendamento em 3 cliques diretamente no dashboard |
+| **Integração de Mapas** | Google Maps, Google Agenda e Waze integrados |
+| **Carteirinha Digital** | Cartão digital com QR Code e dados de saúde |
+| **FastPass** | Plano premium com benefícios Diamante imediatos |
 
 ---
 
-## 🖥️ Páginas Desenvolvidas
+## Páginas Desenvolvidas
 
 ```
 📁 Sprint2/
@@ -65,7 +65,7 @@ O Care(Us) combate o no-show através de:
 
 ---
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 ### Opção 1 — Live Server (VS Code)
 1. Clone o repositório:
@@ -83,7 +83,7 @@ git clone https://github.com/FelipoB/challenge-careplus-sprint2.git
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5** — Estrutura semântica das páginas
 - **CSS3** — Estilos customizados e animações
@@ -94,7 +94,7 @@ git clone https://github.com/FelipoB/challenge-careplus-sprint2.git
 
 ---
 
-## 🗃️ Modelo de Dados (MER)
+## Modelo de Dados (MER)
 
 O modelo conta com **9 entidades** relacionadas:
 
@@ -110,7 +110,7 @@ O modelo conta com **9 entidades** relacionadas:
 
 ---
 
-## 💡 Insights Estratégicos
+## Insights Estratégicos
 
 **01 — Fatores externos aumentam no-show em até 40%**
 > Trânsito, chuva e distância são as principais causas não-comportamentais. O Care(Us) exibe clima e trânsito em tempo real e sugere horários alternativos automaticamente.
@@ -123,7 +123,7 @@ O modelo conta com **9 entidades** relacionadas:
 
 ---
 
-## 👥 Equipe
+## Equipe
 
 | Nome | RM |
 |---|---|
@@ -134,7 +134,7 @@ O modelo conta com **9 entidades** relacionadas:
 
 ---
 
-## 📅 Entregas
+## Entregas
 
 | Sprint | Data | Status |
 |---|---|---|
@@ -143,7 +143,7 @@ O modelo conta com **9 entidades** relacionadas:
 
 ---
 
-## 📄 Licença
+## Licença
 
 Projeto desenvolvido para fins acadêmicos — **FIAP 2025/2026**.  
 Parceria com **Care Plus · Part of Bupa**.
